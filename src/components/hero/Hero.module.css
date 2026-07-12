@@ -1,0 +1,94 @@
+/*=============== Hero ===============*/
+.vistaBanner {
+  background-image:
+    linear-gradient(100deg, #000000, #0000006b),
+    url("/images/banner/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  max-width: 100%;
+  height: 80vh;
+
+  display: flex;
+  align-items: center;
+}
+
+/*=============== Contenido ===============*/
+.contenido {
+  margin: 40px;
+}
+
+.contenido h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--color-blanco);
+}
+
+.contenido p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: var(--color-blanco);
+}
+
+/*=============== Botón ver menú ===============*/
+.botonIr {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-blanco);
+  background-color: var(--color-verde);
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.15);
+}
+
+.botonIr:hover {
+  background-color: var(--color-verde-oscuro);
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+  .vistaBanner {
+    height: 85vh;
+  }
+
+  .contenido {
+    max-width: 65%;
+  }
+
+  .contenido h2 {
+    font-size: 2.5rem;
+  }
+
+  .contenido p {
+    font-size: 1.15rem;
+  }
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .vistaBanner {
+    height: 120vh;
+  }
+
+  .contenido {
+    width: 45%;
+  }
+
+  .contenido h2 {
+    font-size: 3.5rem;
+  }
+
+  .contenido p {
+    font-size: 1.25rem;
+  }
+
+  .botonIr {
+    font-size: 1.25rem;
+  }
+}

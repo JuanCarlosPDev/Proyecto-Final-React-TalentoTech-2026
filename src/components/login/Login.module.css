@@ -1,0 +1,81 @@
+/*=============== Vista login ===============*/
+.vistaLogin {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=============== Tarjeta ===============*/
+.loginTarjeta {
+  background-color: var(--color-blanco);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/*=============== Titúlo ===============*/
+.tituloLogin {
+  color: var(--color-negro);
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/*=============== Formulario ===============*/
+.formularioGrupo {
+  margin-bottom: 1.2rem;
+}
+
+.formularioGrupo label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-girs-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.formularioGrupo input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-gris-intermedio);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formularioGrupo input:hover {
+  border-color: var(--color-verde);
+}
+
+/*=============== Error ===============*/
+.error {
+  color: var(--color-rojo);
+  background-color: var(--color-rojo-claro);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/*=============== Botón iniciar sesión ===============*/
+.botonLogin {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 30px;
+}
+
+.botonLogin:hover:not(:disabled) {
+  background-color: var(--color-verde-oscuro);
+}
+
+.botonLogin:disabled {
+  background-color: var(--color-gris-intermedio);
+  cursor: not-allowed;
+}

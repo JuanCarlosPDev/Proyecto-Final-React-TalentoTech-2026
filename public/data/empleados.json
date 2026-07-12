@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carlos Grill",
+    "rol": "Chef Principal",
+    "imagen": "/images/staff/carlos.jpg",
+    "bio": "Apasionado por la cocina a la parrilla y las hamburguesas gourmet. Carlos lleva más de 10 años perfeccionando recetas únicas, combinando ingredientes frescos con técnicas tradicionales para crear sabores inolvidables."
+  },
+  {
+    "id": 2,
+    "nombre": "Lucía Sabor",
+    "rol": "Chef de Especialidades",
+    "imagen": "/images/staff/lucia.jpg",
+    "bio": "Especialista en combinaciones creativas y opciones gourmet. Lucía se encarga de diseñar hamburguesas innovadoras, buscando siempre sorprender a los clientes con sabores originales y una presentación impecable."
+  },
+  {
+    "id": 3,
+    "nombre": "María Sonrisa",
+    "rol": "Mesera",
+    "imagen": "/images/staff/maria.jpg",
+    "bio": "Reconocida por su energía y excelente trato con los clientes. María se asegura de que cada visita sea una experiencia cómoda y agradable, brindando atención rápida y siempre con una gran sonrisa."
+  }
+]

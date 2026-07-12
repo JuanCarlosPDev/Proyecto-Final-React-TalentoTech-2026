@@ -1,0 +1,84 @@
+/*=============== Grid ===============*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/*=============== Tarjeta ===============*/
+.tarjeta {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*=============== Imágen ===============*/
+.imagen {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 3px solid var(--color-blanco);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*=============== Contenido de la tarjeta ===============*/
+.contenido {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/*=============== Nombre ===============*/
+.nombre {
+  font-size: 1.5rem;
+}
+
+/*=============== Rol ===============*/
+.rol {
+  font-size: 1rem;
+  color: var(--color-verde);
+}
+
+/*=============== Biografia ===============*/
+.biografia {
+  font-size: 1rem;
+  color: var(--color-negro);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+  }
+}

@@ -1,0 +1,52 @@
+/*=============== Contenedor ===============*/
+.sectionTitle {
+  text-align: center;
+}
+
+/*=============== Subtitulo ===============*/
+.subtitle {
+  color: var(--color-verde);
+  padding: 20px 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/*=============== Título ===============*/
+.title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/*=============== Texto ===============*/
+.text {
+  font-size: 1rem;
+  color: var(--color-negro);
+  line-height: 1.5;
+
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.125rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .text {
+    font-size: 1.125rem;
+    max-width: 800px;
+  }
+}

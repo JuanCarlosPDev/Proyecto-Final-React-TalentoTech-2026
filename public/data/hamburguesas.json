@@ -1,0 +1,180 @@
+[
+  {
+    "id": 1,
+    "nombre": "La Clásica",
+    "descripcion": "Medallón de carne con queso cheddar, lechuga, tomate y salsa de la casa.",
+    "precio": 12000,
+    "categoria": "Hamburguesas",
+    "imagen": "/images/burgers/clasica.jpg",
+    "stock": 8,
+    "tiempoPreparacion": 8,
+    "masVendida": false,
+    "ingredientes": [
+      "Medallón de Carne",
+      "Queso Cheddar",
+      "Lechuga",
+      "Tomate",
+      "Salsa de la Casa",
+      "Pan"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Doble con Panceta",
+    "descripcion": "Dos medallones de carne, panceta crujiente, queso provolone y salsa barbacoa ahumada.",
+    "precio": 15000,
+    "categoria": "Hamburguesas",
+    "imagen": "/images/burgers/panceta.jpg",
+    "stock": 10,
+    "tiempoPreparacion": 10,
+    "masVendida": false,
+    "ingredientes": [
+      "Medallón de Carne",
+      "Panceta",
+      "Queso Provolone",
+      "Salsa Barbacoa",
+      "Pan"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Especial de Jalapeño Picante",
+    "descripcion": "Queso pepper jack, jalapeños frescos y mayonesa picante.",
+    "precio": 12700,
+    "categoria": "Hamburguesas",
+    "imagen": "/images/burgers/picante.jpg",
+    "stock": 8,
+    "tiempoPreparacion": 9,
+    "masVendida": false,
+    "ingredientes": [
+      "Medallón de Carne",
+      "Queso Pepper Jack",
+      "Jalapeños",
+      "Mayonesa Picante",
+      "Pan"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Champiñones y Queso Suizo",
+    "descripcion": "Champiñones salteados, queso suizo fundido y alioli de ajo.",
+    "precio": 13900,
+    "categoria": "Hamburguesas",
+    "imagen": "/images/burgers/suizo.jpg",
+    "stock": 6,
+    "tiempoPreparacion": 9,
+    "masVendida": true,
+    "ingredientes": [
+      "Medallón de Carne",
+      "Queso Suizo",
+      "Champiñones",
+      "Alioli de Ajo",
+      "Pan"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "La Veggie de la Huerta",
+    "descripcion": "Medallón a base de plantas con palta, brotes y cebolla morada.",
+    "precio": 13500,
+    "categoria": "Vegetariana",
+    "imagen": "/images/burgers/vegana.jpg",
+    "stock": 10,
+    "tiempoPreparacion": 7,
+    "masVendida": true,
+    "ingredientes": [
+      "Medallón Vegetal",
+      "Palta",
+      "Brotes",
+      "Cebolla Morada",
+      "Pan Vegano"
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Bondiola Desmechada",
+    "descripcion": "Medallón de carne cubierto con bondiola de cerdo desmechada a fuego lento y aros de cebolla.",
+    "precio": 15700,
+    "categoria": "Especialidades",
+    "imagen": "/images/burgers/bondiola.jpg",
+    "stock": 8,
+    "tiempoPreparacion": 12,
+    "masVendida": false,
+    "ingredientes": [
+      "Medallón de Carne",
+      "Bondiola Desmechada",
+      "Aros de Cebolla",
+      "Salsa Barbacoa",
+      "Pan"
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Queso Azul y Cebolla",
+    "descripcion": "Queso azul desmenuzado fundido y cebollas caramelizadas dulces.",
+    "precio": 14200,
+    "categoria": "Hamburguesas",
+    "imagen": "/images/burgers/bbq.jpg",
+    "stock": 4,
+    "tiempoPreparacion": 9,
+    "masVendida": false,
+    "ingredientes": [
+      "Medallón de Carne",
+      "Queso Azul",
+      "Cebolla Caramelizada",
+      "Pan"
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Pollo Buffalo Crujiente",
+    "descripcion": "Pechuga de pollo frita rebozada, bañada en salsa buffalo picante con aderezo ranch.",
+    "precio": 11200,
+    "categoria": "Pollo",
+    "imagen": "/images/burgers/pollo.jpg",
+    "stock": 6,
+    "tiempoPreparacion": 11,
+    "masVendida": true,
+    "ingredientes": [
+      "Pechuga de Pollo",
+      "Salsa Buffalo",
+      "Aderezo Ranch",
+      "Lechuga",
+      "Pan"
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Especial Huevo Frito",
+    "descripcion": "Medallón de carne, huevo frito, queso cheddar y una tarta de papa rallada en pan brioche.",
+    "precio": 15000,
+    "categoria": "Desayuno",
+    "imagen": "/images/burgers/huevo.jpg",
+    "stock": 8,
+    "tiempoPreparacion": 10,
+    "masVendida": false,
+    "ingredientes": [
+      "Medallón de Carne",
+      "Huevo Frito",
+      "Queso Cheddar",
+      "Tarta de Papa",
+      "Pan Brioche"
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "El Trío Definitivo de Sliders",
+    "descripcion": "Tres mini hamburguesas: Clásica, Picante y Champiñones con Queso Suizo.",
+    "precio": 18000,
+    "categoria": "Especialidades",
+    "imagen": "/images/burgers/definitivo.jpg",
+    "stock": 2,
+    "tiempoPreparacion": 12,
+    "masVendida": true,
+    "ingredientes": [
+      "Mini Medallones de Carne",
+      "Variedad de Quesos",
+      "Mini Panes"
+    ]
+  }
+]

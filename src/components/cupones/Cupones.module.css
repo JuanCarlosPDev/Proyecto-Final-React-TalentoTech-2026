@@ -1,0 +1,213 @@
+/*=============== Contenedor ===============*/
+.container {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/*=============== Título ===============*/
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/*=============== Formulario ===============*/
+.formSection {
+  background: var(--color-blanco);
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inputGroup label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gris-oscuro);
+}
+
+.inputGroup input {
+  padding: 0.625rem;
+  border: 1px solid var(--color-gris-intermedio);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.inputGroup input:focus {
+  border-color: var(--color-verde);
+}
+
+/*=============== Botón principal ===============*/
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-verde-oscuro);
+}
+
+/*=============== Listas ===============*/
+.listSection h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-gris-oscuro);
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*=============== Tarjetas ===============*/
+.card {
+  background: var(--color-blanco);
+  border: 1px solid var(--color-gris-intermedio);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/*=============== Descuentos ===============*/
+.codeBadge {
+  background-color: var(--color-verde-claro);
+  color: var(--color-verde-oscuro);
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  align-self: flex-start;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.discountText {
+  font-size: 0.95rem;
+  color: var(--color-gris-oscuro);
+}
+
+/*=============== Botones de las tarjetas ===============*/
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem;
+}
+
+.cardActions button {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btnEdit {
+  background-color: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+.btnEdit:hover {
+  background-color: rgba(5, 150, 105, 0.2);
+}
+
+.btnDelete {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.btnDelete:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .header h1 {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .form {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .inputGroup {
+    flex: 1;
+  }
+
+  .btnPrimary {
+    padding: 0.625rem 1.5rem;
+    height: 42px;
+  }
+
+  .card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+  }
+
+  .cardContent {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .cardActions {
+    border-top: none;
+    padding-top: 0;
+    flex-direction: row;
+  }
+
+  .cardActions button {
+    flex: none;
+    padding: 0.5rem 1rem;
+  }
+}

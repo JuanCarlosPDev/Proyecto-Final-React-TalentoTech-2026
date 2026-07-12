@@ -1,0 +1,87 @@
+/*=============== Footer ===============*/
+.footer {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+  padding: 25px;
+}
+
+.footer h4 {
+  font-size: 1rem;
+  margin: 12px 0;
+}
+
+.footer p {
+  font-size: 0.875rem;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: var(--color-blanco);
+}
+
+.footer img {
+  margin: 5px 15px 5px 0;
+}
+
+/* Estilos para acomodar las columnas */
+.topSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+/* Estilos para las redes sociales */
+.socialLink {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.socialLink i {
+  color: var(--color-blanco);
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid var(--color-blanco);
+  padding: 5px 9px;
+
+  border-radius: 4px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.socialLink i:hover {
+  border-color: var(--color-verde);
+  color: var(--color-verde);
+}
+
+/* Estilos para las tiendas de aplicación */
+.app img {
+  border-radius: 6px;
+}
+
+/* Estilos para la sección final del footer */
+.bottomSection {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--color-blanco);
+  text-align: center;
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+  .contenedorCarrito {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .topSection {
+    gap: 20px;
+  }
+}

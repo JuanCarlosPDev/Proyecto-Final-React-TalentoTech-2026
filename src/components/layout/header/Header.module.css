@@ -1,0 +1,27 @@
+/*=============== Contenedor encabezado ===============*/
+.contenedorEncabezado {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0 16px;
+  background-color: white;
+  box-shadow: 0 4px 10px -3px rgba(0, 0, 0, 0.5);
+  color: #6B352B;
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+  .contenedorEncabezado {
+    padding: 0 24px;
+  }
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .contenedorEncabezado {
+    padding: 0 32px;
+  }
+}

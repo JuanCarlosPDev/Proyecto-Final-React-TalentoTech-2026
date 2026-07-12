@@ -1,0 +1,295 @@
+/*=============== Título ===============*/
+.tituloCarrito {
+  font-size: 2rem;
+  color: var(--color-negro);
+  margin-bottom: 28px;
+}
+
+/*=============== Layout: dos columnas ===============*/
+.layoutCarrito {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/*=============== Columna productos ===============*/
+.columnaProductos {
+  /* Toma 2/3 del espacio */
+  flex: 2;
+  width: 100%;
+}
+
+/*=============== Encabezado ===============*/
+.encabezadoLista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-verde-claro);
+  font-weight: bold;
+  color: var(--color-negro);
+}
+
+/*=============== Botón eliminar todos los productos ===============*/
+.botonVaciarTodo {
+  background: none;
+  color: var(--color-rojo);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*=============== Lista productos ===============*/
+.listaCarrito {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/*=============== Tarjetas ===============*/
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-blanco);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+}
+
+/*=============== Imágen ===============*/
+.imagen {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/*=============== Detalle ===============*/
+.tarjetaDetalles {
+  flex: 1;
+}
+
+/*=============== Nombre ===============*/
+.nombre {
+  font-size: 1.1rem;
+  color: var(--color-negro);
+  margin-bottom: 4px;
+}
+
+/*=============== Precio ===============*/
+.precioUnitario {
+  font-size: 0.85rem;
+  color: var(--color-gris-oscuro);
+}
+
+/*=============== Botones cantidad ===============*/
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-gris-claro);
+  padding: 4px;
+  border-radius: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.botonMini {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-blanco);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.botonMini:hover {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+}
+
+/*=============== Cantidad ===============*/
+.cantidad {
+  font-weight: bold;
+  min-width: 16px;
+  text-align: center;
+}
+
+/*=============== Columna subtotal ===============*/
+.subtotalCol {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 120px;
+  justify-content: flex-end;
+}
+
+.subtotal {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-negro);
+}
+
+/*=============== Botón eliminar ===============*/
+.botonEliminarUnico {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+
+.botonEliminarUnico:hover {
+  transform: scale(1.2);
+}
+
+/*=============== Columna resumen ===============*/
+.columnaResumen {
+  /* Toma 1/3 del espacio */
+  flex: 1;
+  width: 100%;
+  position: sticky;
+  top: 20px;
+}
+
+/*=============== Tarjeta ===============*/
+.tarjetaResumen {
+  background-color: var(--color-blanco);
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/*=============== Título ===============*/
+.tituloResumen {
+  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+  color: var(--color-negro);
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 12px;
+}
+
+/*=============== Cupones ===============*/
+.formularioCupon {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.inputCupon {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--color-gris-intermedio);
+  font-size: 0.9rem;
+}
+
+/*=============== Botón cupón ===============*/
+.botonCupon {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+  padding: 0 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*=============== Mensaje cupón ===============*/
+.mensajeCupon {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.cuponExito {
+  color: var(--color-verde);
+}
+.cuponError {
+  color: var(--color-rojo);
+}
+
+/*=============== Línea ===============*/
+.desgloseLineas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.lineaResumen {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-negro);
+  font-size: 0.95rem;
+}
+
+.lineaDescuento {
+  color: var(--color-verde);
+  font-weight: bold;
+}
+
+/*=============== Mensaje envío ===============*/
+.envioGratis {
+  color: var(--color-verde);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.avisoEnvioGratis {
+  font-size: 0.75rem;
+  color: var(--color-rojo);
+  margin: -4px 0 0 0;
+  background-color: #fff5f5;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/*=============== Línea total ===============*/
+.lineaTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-negro);
+  border-top: 1px solid #e9ecef;
+  padding-top: 16px;
+  margin-bottom: 24px;
+}
+
+/*=============== Botón terminar ===============*/
+.botonFinalizar {
+  width: 100%;
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botonFinalizar:hover {
+  background-color: var(--color-verde-oscuro);
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 900px) {
+  .layoutCarrito {
+    flex-direction: row;
+  }
+
+  .tarjetas {
+    flex-direction: row;
+  }
+}

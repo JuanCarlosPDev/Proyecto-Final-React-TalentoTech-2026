@@ -1,0 +1,42 @@
+/*=============== Menú categoría ===============*/
+.menuCategoria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+/*=============== Botón categoría ===============*/
+.botonCategoria {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-verde);
+  background-color: var(--color-verde-claro);
+  border: 1px solid var(--color-verde);
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botonCategoria:hover {
+  background-color: var(--color-blanco);
+}
+
+.botonCategoria.activo {
+  color: var(--color-blanco);
+  background-color: var(--color-verde);
+  box-shadow: 0 4px 10px rgb(6, 46, 39);
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+}

@@ -1,0 +1,115 @@
+/*=============== Vista dashboard ===============*/
+.vistaDashboard {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/*=============== Título ===============*/
+.tituloDashboard {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-negro);
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--color-verde-claro);
+}
+
+/*=============== Grid ===============*/
+.gridTarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/*=============== Tarjetas ===============*/
+.tarjeta {
+  background: var(--color-blanco);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/*=============== Íconos ===============*/
+.iconTarjeta {
+  font-size: 2.5rem;
+  color: var(--color-verde);
+  margin-bottom: 1rem;
+  background-color: var(--color-verde-claro);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/*=============== Título ===============*/
+.tituloTarjeta {
+  font-size: 1.25rem;
+  color: var(--color-negro);
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+/*=============== Botón ===============*/
+.botonIr {
+  width: 100%;
+  max-width: 200px;
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botonIr:hover {
+  background-color: var(--color-verde-oscuro);
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .vistaDashboard {
+    padding: 3rem 2rem;
+  }
+
+  .tituloDashboard {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .gridTarjeta {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .tarjeta {
+    flex: 1;
+    padding: 3rem 2rem;
+  }
+}

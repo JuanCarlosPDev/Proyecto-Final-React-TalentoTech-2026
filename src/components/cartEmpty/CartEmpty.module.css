@@ -1,0 +1,41 @@
+/*=============== Contendor principal ===============*/
+.contenedorCarritoVacio {
+  text-align: center;
+}
+
+/*=============== Ícono carrito vacío ===============*/
+.iconoCarritoVacio {
+  font-size: 2.5rem;
+  color: var(--color-rojo);
+}
+
+/*=============== Título y mensaje ===============*/
+.tituloCarritoVacio,
+.mensajeCarritoVacio {
+  color: var(--color-negro);
+}
+
+/*=============== Enlace volver ===============*/
+.botonVolver {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--color-blanco);
+  background-color: var(--color-verde);
+  border-radius: 6px;
+  padding: 12px 24px;
+  margin-top: 16px;
+}
+
+.botonVolver:hover {
+  background-color: var(--color-verde-oscuro);
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+}

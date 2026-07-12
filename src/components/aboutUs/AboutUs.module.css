@@ -1,0 +1,55 @@
+/*=============== Flex ===============*/
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/*=============== Imágen ===============*/
+.imagen {
+  max-width: 70%;
+  padding: 0 30px;
+}
+
+/*=============== Título ===============*/
+.contenido h3 {
+  font-size: 1.5rem;
+}
+
+/*=============== Mensaje ===============*/
+.contenido p {
+  font-size: 1rem;
+  color: var(--color-negro);
+  padding: 10px 0;
+  line-height: 1.8;
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+  .imagen {
+    max-width: 37.5rem;
+  }
+
+  .contenido h3 {
+    font-size: 1.625rem;
+  }
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .imagen {
+    flex: 1 1 34.375rem;
+  }
+
+  .contenido {
+    flex: 1 1 28.125rem;
+  }
+}

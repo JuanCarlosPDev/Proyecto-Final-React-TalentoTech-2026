@@ -1,0 +1,67 @@
+/*=============== Variables ===============*/
+:root {
+  --fuente-jost: "Jost", sans-serif;
+  --fuente-aclonica: "Aclonica", sans-serif;
+  --color-blanco: #ffffff;
+  --color-gris-claro: #f8f9fa;
+  --color-gris-intermedio: #cccccc;
+  --color-gris-oscuro: #666666;
+  --color-negro: #333333;
+  --color-verde: #0e6253;
+  --color-verde-claro: #d9f2ee;
+  --color-verde-oscuro: #0a4439;
+  --color-rojo: #e01829;
+  --color-rojo-claro: #f8d7da;
+}
+
+/*=============== Reseteo ===============*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*=============== Desplazamineto suave ===============*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3.75rem;
+}
+
+/*=============== Estilos generales: documento ===============*/
+body {
+  font-family: var(--fuente-jost);
+  color: var(--color-negro);
+}
+
+/*=============== Estilos generales: listas ===============*/
+ul {
+  list-style: none;
+}
+
+/*=============== Estilos generales: enlaces ===============*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*=============== Estilos generales: imágenes ===============*/
+img {
+  max-width: 100%;
+}
+
+/*=============== Estilos generales: botones ===============*/
+button {
+  border: none;
+}
+
+/*=============== Estilos generales: header, main, footer ===============*/
+header,
+main,
+footer {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  background-color: var(--color-gris-claro);
+}

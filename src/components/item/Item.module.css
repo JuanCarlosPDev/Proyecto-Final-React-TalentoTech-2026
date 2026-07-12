@@ -1,0 +1,169 @@
+/*=============== Grid ===============*/
+.gridProductos {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* - auto-fill: mete tantas tarjetas por fila como entren físicamente.
+     - minmax(280px, 1fr): cada tarjeta mide como MÍNIMO 280px. Si sobra espacio, 
+       se estiran proporcionalmente hasta rellenar la fila (1fr). */
+}
+
+/*=============== Tarjeta ===============*/
+.tarjeta {
+  background-color: var(--color-blanco);
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-verde);
+}
+
+/*=============== Cotenedor imágen ===============*/
+.contenedorImagen {
+  position: relative;
+  height: 180px;
+  width: 100%;
+}
+
+/*=============== Imágen ===============*/
+.imagen {
+  /* Evita que la foto de Unsplash se deforme */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*=============== Categoría y tiempo de preparación ===============*/
+.categoria {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  text-transform: uppercase;
+}
+
+.infoTiempo {
+  position: absolute;
+  top: 50px;
+  left: 12px;
+}
+
+.categoria,
+.infoTiempo {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--color-verde);
+  background-color: var(--color-verde-claro);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/*=============== Contenido de la tarjeta ===============*/
+.contenido {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  /* Hace que el contenido ocupe todo el espacio disponible */
+  flex-grow: 1;
+}
+
+/*=============== Título ===============*/
+.titulo {
+  font-size: 1.2rem;
+  color: var(--color-negro);
+  margin-bottom: 8px;
+}
+
+/*=============== Descripción ===============*/
+.descripcion {
+  font-size: 0.9rem;
+  color: var(--color-gris-oscuro);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  /* Empuja el tiempo y el pie siempre hacia abajo */
+  flex-grow: 1;
+}
+
+/*=============== Contenido final ===============*/
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-verde-claro);
+  padding-top: 12px;
+}
+
+/*=============== Contenedor precio ===============*/
+.contenedorPrecio {
+  display: flex;
+  flex-direction: column;
+}
+
+/*=============== Precio ===============*/
+.etiquetaPrecio {
+  font-size: 0.75rem;
+  color: var(--color-gris-oscuro);
+}
+
+.precio {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #0e6253;
+}
+
+/*=============== Boton detalle ===============*/
+.botonDetalle {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-verde);
+  background-color: var(--color-verde-claro);
+  border-color: var(--color-verde);
+  border-radius: 6px;
+  padding: 5px 12px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.botonDetalle:hover {
+  color: var(--color-verde-oscuro);
+  background-color: var(--color-blanco);
+  border-color: var(--color-verde-oscuro);
+}
+
+/*=============== Botón agregar ===============*/
+.botonAgregar {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botonAgregar:hover:not(:disabled) {
+  background-color: var(--color-verde-oscuro);
+}
+
+/* Cuando no hay stock */
+.botonAgregar:disabled {
+  background-color: var(--color-gris-intermedio);
+  cursor: not-allowed;
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+}

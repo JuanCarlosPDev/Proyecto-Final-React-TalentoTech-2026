@@ -1,0 +1,231 @@
+.contenedorDetalle {
+  padding: 60px 5px 120px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/*=============== Enlace regrasar ===============*/
+.botonRegresar {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--color-verde);
+  margin-bottom: 24px;
+  transition: transform 0.2s ease;
+}
+
+.botonRegresar:hover {
+  transform: translateX(-4px);
+  color: var(--color-verde-oscuro);
+}
+
+/*=============== Vista detalle ===============*/
+.vistaDetalle {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--color-blanco);
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/*=============== Columna imágen ===============*/
+.columnaImagen {
+  position: relative;
+  /* Ocupa el 50% de la tarjeta */
+  flex: 1;
+}
+
+/*=============== Imágen ===============*/
+.imagen {
+  /* Evita que la foto de Unsplash se deforme */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*=============== Categoría ===============*/
+.categoria {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-verde);
+  background-color: var(--color-verde-claro);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/*=============== Categoría y tiempo de preparación ===============*/
+.categoria {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-transform: uppercase;
+}
+
+.infoTiempo {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+
+.categoria,
+.infoTiempo {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--color-verde);
+  background-color: var(--color-verde-claro);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/*=============== Columna info ===============*/
+.columnaInfo {
+  /* Ocupa el otro 50% */
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*=============== Título ===============*/
+.titulo {
+  font-size: 2.2rem;
+  color: var(--color-negro);
+  margin-bottom: 12px;
+}
+
+/*=============== Descripción ===============*/
+.descripcion {
+  font-size: 1.05rem;
+  color: var(--color-gris-oscuro);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/*=============== Cantidad de stock ===============*/
+.stock {
+  font-size: 1rem;
+  color: var(--color-verde);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-verde-claro);
+}
+
+.stock i {
+  padding-right: 5px;
+}
+
+/*=============== Ingredientes ===============*/
+.seccionIngredientes {
+  margin-bottom: 28px;
+}
+
+/*=============== Estilos generales para los h3 ===============*/
+h3 {
+  font-size: 1.1rem;
+  color: var(--color-negro);
+  margin-bottom: 12px;
+}
+
+/*=============== lista de ingredientes ===============*/
+.listaIngredientes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.itemIngrediente {
+  font-size: 0.85rem;
+  color: var(--color-negro);
+  background-color: var(--color-gris-claro);
+  border: 1px solid var(--color-gris-intermedio);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/*=============== Opciones: chico, mediano, grande ===============*/
+.seccionOpciones {
+  margin-bottom: 32px;
+}
+
+/*=============== Cantidad de un producto ===============*/
+.seccionCantidad {
+  margin-bottom: 32px;
+}
+
+/*=============== Parte final del detalle ===============*/
+.pieDetalle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  /* Empuja el pie al fondo si sobra espacio vertical */
+  margin-top: auto;
+  border-top: 2px solid var(--color-verde-claro);
+}
+
+/*=============== Precio ===============*/
+.precioContenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.etiquetaPrecio {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-gris-oscuro);
+}
+
+.precio {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--color-verde);
+}
+
+/*=============== Botón agregar al carrito ===============*/
+.botonCompra {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-blanco);
+  background-color: var(--color-verde);
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.15);
+}
+
+.botonCompra:hover:not(:disabled) {
+  background-color: var(--color-oscuro);
+}
+
+.botonCompra:disabled {
+  background-color: var(--color-gris-intermedio);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/*=============== Responsive ===============*/
+
+/*=============== Tablet ===============*/
+@media (min-width: 460px) {
+}
+
+/*=============== Laptop ===============*/
+@media (min-width: 768px) {
+  .vistaDetalle {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .columnaInfo {
+    padding: 40px;
+  }
+}
