@@ -40,7 +40,7 @@ Este proyecto forma parte de la Entrega Final del curso de React JS.
 2.  Ingresar a la carpeta del proyecto:
 
     ```bash
-    cd BRASA
+    cd nombre del proyecto
     ```
 
 3.  Instala las dependencias necesarias:
