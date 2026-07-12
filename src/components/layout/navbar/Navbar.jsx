@@ -46,7 +46,7 @@ function Navbar() {
             )}
                    <div className={styles.userSection}>
         <span className={styles.userEmail}>
-          ¡Hola, <span className={styles.adminBadge}>admin@gmail.com</span>!
+          ¡Hola, <span className={styles.adminBadge}>{user.email}</span>!
         </span>
             <button className={styles.btnLogout} onClick={logout}>
           <i className="bi bi-box-arrow-right"></i>
