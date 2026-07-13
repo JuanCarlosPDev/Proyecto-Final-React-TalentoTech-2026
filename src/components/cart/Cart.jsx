@@ -16,6 +16,9 @@ import CartEmpty from "../cartEmpty/CartEmpty";
 import { useCart } from "../../context/CartContext";
 import { useAuth } from "../../context/AuthContext";
 
+/*=============== Hooks ===============*/
+import useCupones from "../../hooks/useCupones";
+
 function Cart() {
   const {
     cart,
@@ -27,7 +30,7 @@ function Cart() {
     increaseQuantity,
     decreaseQuantity,
   } = useCart();
-
+  const { cupones, cargando, error } = useCupones();
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -50,10 +53,20 @@ function Cart() {
   // 2. FUNCIÓN DE CUPÓN (Simulación local)
   const gestionarCupon = (e) => {
     e.preventDefault();
-    if (cupon.toUpperCase() === "BURGER10") {
-      setDescuentoAplicado(0.1); // 10% de descuento
-      setMensajeCupon("¡Cupón BURGER10 aplicado con éxito (10% OFF)!");
+    // 1. Buscamos si el texto del input coincide con el 'codigo' de algún cupón de la lista
+    const cuponEncontrado = cupones.find(
+      (c) => c.codigo.trim().toLowerCase() === cupon.trim().toLowerCase(),
+    );
+    // 2. Si lo encuentra, aplicamos su descuento correspondiente
+    if (cuponEncontrado) {
+      const porcentajeDescuento = cuponEncontrado.descuento / 100;
+
+      setDescuentoAplicado(porcentajeDescuento);
+      setMensajeCupon(
+        `¡Cupón ${cuponEncontrado.codigo.toUpperCase()} aplicado con éxito (${porcentajeDescuento * 100}% OFF)!`,
+      );
     } else {
+      // 3. Si no coincide con ninguno, reseteamos y damos error
       setDescuentoAplicado(0);
       setMensajeCupon("Cupón inválido o vencido.");
     }
@@ -181,7 +194,7 @@ function Cart() {
                 <div
                   className={`${styles.lineaResumen} ${styles.lineaDescuento}`}
                 >
-                  <span>Descuento (10%)</span>
+                  <span>Descuento</span>
                   <span>-${montoDescuento.toLocaleString("es-AR")}</span>
                 </div>
               )}
