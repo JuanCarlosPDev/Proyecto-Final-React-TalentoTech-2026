@@ -22,17 +22,16 @@ const Gestion = () => {
   const [productos, setProductos] = useState([]);
 
   const estadoInicialForm = {
-    id: 0,
+    id: "",
     nombre: "",
     descripcion: "",
     categoria: "",
-    precio: 0,
-    tiempoPreparacion: 0,
-    stock: 0,
-    deatlle: "",
+    precio: "",
+    tiempoPreparacion: "",
+    stock: "",
     imagen: "",
     masVendida: false,
-    ingredientas: "",
+    ingredientes: "",
   };
 
   const [datosForm, setDatosForm] = useState(estadoInicialForm);
@@ -97,6 +96,87 @@ const Gestion = () => {
       alert("Por favor, selecciona una imagen para el producto.");
       return;
     }
+    // === VALIDACIÓN: ID ===
+    const idNumero = Number(datosForm.id);
+    if (datosForm.id === "" || datosForm.id === undefined) {
+      alert("El ID es obligatorio.");
+      return;
+    } else if (isNaN(idNumero)) {
+      alert("Debe ser un número válido.");
+      return;
+    } else if (idNumero < 0 || idNumero > 100) {
+      alert("El ID debe estar entre 0 y 100.");
+      return;
+    }
+
+    // === VALIDACIÓN: Nombre ===
+    if (!datosForm.nombre || !datosForm.nombre.trim()) {
+      alert("El nombre es obligatorio.");
+      return;
+    } else if (datosForm.nombre.trim().length < 3) {
+      alert("Debe tener al menos 3 caracteres.");
+      return;
+    }
+
+    // === VALIDACIÓN: Descripción ===
+    if (!datosForm.descripcion || !datosForm.descripcion.trim()) {
+      alert("La descripción es obligatoria.");
+      return;
+    } else if (datosForm.descripcion.trim().length < 10) {
+      alert("La descripción debe tener al menos 10 caracteres.");
+      return;
+    }
+
+    // === VALIDACIÓN: Categoría ===
+    if (!datosForm.categoria || !datosForm.categoria.trim()) {
+      alert("La categoría es obligatoria.");
+      return;
+    } else if (datosForm.descripcion.trim().length < 6) {
+      alert("La categoría debe tener al menos 6 caracteres.");
+      return;
+    }
+
+    // === VALIDACIÓN: Precio ===
+    const precioNumero = parseFloat(datosForm.precio);
+    if (datosForm.precio === "" || datosForm.precio === undefined) {
+      alert("El precio es obligatorio.");
+      return;
+    } else if (isNaN(precioNumero) || precioNumero <= 0) {
+      alert("El precio debe ser un número mayor a 0.");
+      return;
+    }
+
+    // === VALIDACIÓN: Tiempo de Preparación ===
+    const tiempoNumero = Number(datosForm.tiempoPreparacion);
+    if (
+      datosForm.tiempoPreparacion === "" ||
+      datosForm.tiempoPreparacion === undefined
+    ) {
+      alert("El tiempo de preparación es obligatorio.");
+      return;
+    } else if (isNaN(tiempoNumero) || tiempoNumero <= 0) {
+      alert("Debe ser un tiempo válido en minutos (mayor a 0).");
+      return;
+    }
+
+    // === VALIDACIÓN: Stock ===
+    const stockNumero = Number(datosForm.stock);
+    if (datosForm.stock === "" || datosForm.stock === undefined) {
+      alert("El stock es obligatorio.");
+      return;
+    } else if (isNaN(stockNumero) || stockNumero < 0) {
+      alert("El stock no puede ser un número negativo.");
+      return;
+    }
+
+    // === VALIDACIÓN: Ingredientes ===
+    if (!datosForm.ingredientes || !datosForm.ingredientes.trim()) {
+      alert("Los ingredientes son obligatorios.");
+      return;
+    } else if (datosForm.ingredientes.trim().length < 5) {
+      alert("Debes especificar mejor los ingredientes (mínimo 5 caracteres).");
+      return;
+    }
 
     //Ejercicio Clase 6
     //Paso 2
@@ -140,14 +220,14 @@ const Gestion = () => {
         id: Number(datosForm.id),
         precio: parseFloat(datosForm.precio),
         stock: Number(datosForm.stock),
-        tiempoPreparacion: Number(datosForm.stock),
+        tiempoPreparacion: Number(datosForm.tiempoPreparacion),
       };
 
       // Por el momento hacemos un console.log
       console.log("Enviando producto a Firebase:", productoCompleto);
 
       // Apuntamos a la colección "productos" (si no existe, se crea)
-      const productosCollection = collection(db, "productos");
+      const productosCollection = collection(db, "hamburguesas");
       // Agregamos el nuevo documento a la colección
 
       if (productoAEditar) {
