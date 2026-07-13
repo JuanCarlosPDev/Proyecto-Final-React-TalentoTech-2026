@@ -9,19 +9,6 @@ function FormularioProducto({
   loading,
   modoEdicion,
 }) {
-  console.log(datosForm);
-
-  const formStyle = {
-    display: "flex",
-    flexDirection: "column",
-    maxWidth: "24rem",
-    margin: "3rem auto",
-    padding: "1.5rem",
-    border: "1px solid #ddd",
-    borderRadius: "8px",
-    gap: "16px",
-  };
-
   return (
     <section className={styles.card}>
       <h3>{modoEdicion ? "Editar Producto" : "Agregar Nuevo Producto"}</h3>
@@ -62,6 +49,17 @@ function FormularioProducto({
           />
         </div>
         <div className={styles.formGroup}>
+          <label className={styles.label}>Categoría</label>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Ej: Especialidades"
+            name="categoria"
+            value={datosForm.categoria}
+            onChange={manejarCambio}
+          />
+        </div>
+        <div className={styles.formGroup}>
           <label className={styles.label}>Precio</label>
           <input
             className={styles.input}
@@ -69,7 +67,7 @@ function FormularioProducto({
             placeholder="Ej: 13900"
             name="precio"
             min="0"
-            max="100"
+            max="1000000"
             value={datosForm.precio}
             onChange={manejarCambio}
           />
